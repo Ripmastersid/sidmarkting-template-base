@@ -1,0 +1,102 @@
+/* VARIÁVEIS DE CORES (Fácil de mudar para o cliente!) */
+:root {
+    --bg-main: #050b14;
+    --card-bg: #0a1628;
+    --card-hover: #111e35;
+    --primary: #FFA000;
+    --secondary: #FF3D00;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(10, 22, 40, 0.9);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+.logo-area { display: flex; align-items: center; gap: 12px; }
+.logo-img { width: 40px; height: 40px; border-radius: 50%; object-fit: contain; }
+.brand-name { font-size: 20px; font-weight: bold; color: var(--primary); letter-spacing: 1px; }
+
+.nav-menu { display: flex; align-items: center; gap: 20px; }
+.nav-menu a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+.nav-menu a:hover { color: var(--primary); }
+.btn-nav { background: var(--primary); color: #000 !important; padding: 8px 18px; border-radius: 20px; font-weight: bold; }
+
+/* HERO SECTION */
+.hero-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: radial-gradient(circle at center, #111e35 0%, var(--bg-main) 70%);
+}
+.hero-content { max-width: 700px; margin: 0 auto; }
+.hero-content h1 { font-size: 40px; margin-bottom: 20px; font-weight: 800; }
+.highlight { color: var(--primary); }
+.hero-content p { font-size: 16px; color: var(--text-muted); margin-bottom: 30px; }
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #000;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 20px rgba(255, 160, 0, 0.4);
+    transition: transform 0.2s;
+}
+.btn-primary:hover { transform: scale(1.05); }
+
+/* TECH MARQUEE (Barra de IAs correndo) */
+.tech-marquee {
+    background: #03070d;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.tech-marquee span { margin: 0 15px; color: var(--text-muted); }
+.tech-marquee span:first-child { color: var(--primary); }
+
+/* CASES SECTION */
+.cases-section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; text-align: center; }
+.cases-section h2 { font-size: 28px; color: var(--primary); margin-bottom: 10px; }
+.section-subtitle { color: var(--text-muted); margin-bottom: 40px; font-size: 15px; }
+
+.cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.case-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.3s, background 0.3s;
+}
+.case-card:hover { transform: translateY(-5px); background: var(--card-hover); }
+.case-icon { font-size: 28px; color: var(--primary); margin-bottom: 15px; }
+.case-card h3 { font-size: 18px; margin-bottom: 10px; }
+.case-card p { font-size: 13px; color: var(--text-muted); }
+
+/* FOOTER */
+.footer {
